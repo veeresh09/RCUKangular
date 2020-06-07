@@ -1,0 +1,167 @@
+<mat-card>
+  <form (submit)="onSubmit(RCform)" #RCform="ngForm">
+    <mat-card>
+      <mat-card-title>UserInfo</mat-card-title>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="applicantName"
+            ngModel
+            type="text"
+            placeholder="Enter Your Name"
+            #userInput="ngModel"
+            required
+            applicantName
+          />
+          <mat-error *ngIf="userInput.invalid">Enter a valid input</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="applicantemail"
+            ngModel
+            type="email"
+            placeholder="Email"
+            #emailInput="ngModel"
+            required
+            applicantemail
+          />
+          <mat-error *ngIf="emailInput.invalid">Enter a valid input</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="applicantmobileno"
+            ngModel
+            type="text"
+            placeholder="Mobile No"
+            #applicantmobilenoInput="ngModel"
+            required
+            applicantmobileno
+          />
+          <mat-error *ngIf="applicantmobilenoInput.invalid"
+            >Enter a valid input</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="applicantaddress"
+            ngModel
+            type="text"
+            placeholder="Address"
+            #applicantaddressInput="ngModel"
+            required
+            applicantaddress
+          />
+          <mat-error *ngIf="applicantaddressInput.invalid"
+            >Enter a valid input</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="pincode"
+            ngModel
+            type="text"
+            placeholder="pincode"
+            #pincodeInput="ngModel"
+            required
+            pincode
+          />
+          <mat-error *ngIf="pincodeInput.invalid"
+            >Enter a valid input</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="applicantdist"
+            ngModel
+            type="text"
+            placeholder="District"
+            #applicantdistInput="ngModel"
+            required
+            applicantdist
+          />
+          <mat-error *ngIf="applicantdistInput.invalid"
+            >Enter a valid input</mat-error
+          >
+        </mat-form-field>
+      </div>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Road Info</mat-card-title>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="roaddist"
+            ngModel
+            type="text"
+            placeholder="DIstrict"
+            #roaddistInput="ngModel"
+            required
+            roaddist
+          />
+          <mat-error *ngIf="roaddistInput.invalid"
+            >Enter a valid input</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="streetno"
+            ngModel
+            type="text"
+            placeholder="Street Number"
+            #streetnoInput="ngModel"
+            required
+            streetno
+          />
+          <mat-error *ngIf="streetnoInput.invalid"
+            >Enter a valid input</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="roadlen"
+            ngModel
+            type="text"
+            placeholder="Length"
+            #roadlenInput="ngModel"
+            required
+            roadlen
+          />
+          <mat-error *ngIf="roadlenInput.invalid"
+            >Enter a valid input</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input
+            matInput
+            name="roadcost"
+            ngModel
+            type="text"
+            placeholder="Estiamted Cost"
+            #roadcostInput="ngModel"
+            required
+            roadcost
+          />
+          <mat-error *ngIf="roadcostInput.invalid"
+            >Enter a valid input</mat-error
+          >
+        </mat-form-field>
+      </div>
+    </mat-card>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</mat-card>
