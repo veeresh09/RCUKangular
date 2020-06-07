@@ -39,9 +39,12 @@ export class RFormService {
     rform.usr_consmcode = this.consumcode;
     console.log(rform);
     this.http
-      .post('http://127.0.0.1:8000/api/forms/', rform)
+      .post<{ message: string }>('http://127.0.0.1:8000/api/forms/', rform)
       .subscribe((res) => {
         console.log(res);
+        if (res.message == 'succesfull') {
+          this.router.navigate(['/pay']);
+        }
       });
   }
 }
