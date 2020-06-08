@@ -1,0 +1,57 @@
+<mat-card>
+  <h5>Charges: Roadcutting Charges</h5>
+  <h5>Charges: {{ this.billNumber }}</h5>
+  <h5>Amount to be Paid: {{ this.totalAmountPaid }}</h5>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Road Info</mat-card-title>
+  <form (submit)="onSubmit(paymentform)" #paymentform="ngForm">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <input
+          matInput
+          name="payerName"
+          ngModel
+          type="text"
+          placeholder="payer Name"
+          #payernameInput="ngModel"
+          required
+          payerName
+        />
+        <mat-error *ngIf="payernameInput.invalid"
+          >Enter a valid input</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input
+          matInput
+          name="payerno"
+          ngModel
+          type="text"
+          placeholder="payer Number"
+          #payernoInput="ngModel"
+          required
+          payerno
+        />
+        <mat-error *ngIf="payernoInput.invalid">Enter a valid input</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <input
+          matInput
+          name="amount"
+          ngModel
+          type="number"
+          placeholder="Amount "
+          #amountInput="ngModel"
+          required
+          amount
+        />
+        <mat-error *ngIf="amountInput.invalid">Enter a valid input</mat-error>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</mat-card>

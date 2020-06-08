@@ -12,8 +12,16 @@ import { LoginComponent } from './login/login.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { RcuttingForm } from './form/creatingrequest/form.component';
+import { RpaymentForm } from './form/payment/payment.component';
+import { Rreciept } from './form/reciept/reciept.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RcuttingForm],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RcuttingForm,
+    RpaymentForm,
+    Rreciept,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
